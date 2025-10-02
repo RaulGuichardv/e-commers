@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiénes somos - MiTienda</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page-quienes">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="index.html">MiTienda</a></h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="carrito.html">Carrito <span id="cart-count" class="badge">0</span></a></li>
+          <li><a href="busqueda.html">Búsqueda</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Sobre nosotros</h2>
+      <p id="descripcion-corta">
+        MiTienda es un proyecto educativo que demuestra cómo construir una tienda básica con HTML, CSS y JavaScript.
+      </p>
+
+      <div id="descripcion-completa" class="hidden">
+        <p>
+          Nacimos como un grupo de estudiantes interesados en el desarrollo web. Nuestro objetivo es aprender buenas prácticas y ofrecer una experiencia clara y accesible.
+        </p>
+      </div>
+
+      <button id="toggle-mas" class="btn-small">Ver más</button>
+
+      <h3>Equipo</h3>
+      <table class="team-table">
+        <thead>
+          <tr><th>Nombre</th><th>Rol</th><th>Correo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ana López</td><td>Desarrolladora</td><td>ana@example.com</td></tr>
+          <tr><td>Juan Pérez</td><td>Diseño</td><td>juan@example.com</td></tr>
+          <tr><td>María Ruiz</td><td>Documentación</td><td>maria@example.com</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Misión, Visión y Valores</h3>
+      <ul>
+        <li>Misión: Aprender y compartir conocimiento.</li>
+        <li>Visión: Ser una referencia de proyectos estudiantiles.</li>
+        <li>Valores: Transparencia, colaboración y mejora continua.</li>
+      </ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

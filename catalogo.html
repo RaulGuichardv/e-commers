@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catálogo - MiTienda</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page-catalogo">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="index.html">MiTienda</a></h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="carrito.html">Carrito <span id="cart-count" class="badge">0</span></a></li>
+          <li><a href="busqueda.html">Búsqueda</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Catálogo de productos</h2>
+
+    <section class="products-grid" id="products-grid">
+      <!-- Producto 1 -->
+      <article class="product-card">
+        <img src="./imgs/camisa1.jpeg" alt="Camisa" />
+        <h4>Camisa casual</h4>
+        <p class="price">$350</p>
+        <button class="add-cart" data-name="Camisa casual" data-price="350">Agregar al carrito</button>
+      </article>
+
+      <!-- Producto 2 -->
+      <article class="product-card">
+        <img src="./imgs/zapatos1.jpeg" alt="Zapatos" />
+        <h4>Zapatos deportivos</h4>
+        <p class="price">$850</p>
+        <button class="add-cart" data-name="Zapatos deportivos" data-price="850">Agregar al carrito</button>
+      </article>
+
+      <!-- Producto 3 -->
+      <article class="product-card">
+        <img src="./imgs/gorra1.jpeg" alt="Gorra" />  
+        <h4>Gorra unisex</h4>
+        <p class="price">$150</p>
+        <button class="add-cart" data-name="Gorra unisex" data-price="150">Agregar al carrito</button>
+      </article>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

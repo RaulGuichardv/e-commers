@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registro - MiTienda</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page-registro">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="index.html">MiTienda</a></h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="carrito.html">Carrito <span id="cart-count" class="badge">0</span></a></li>
+          <li><a href="busqueda.html">Búsqueda</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Registro de usuario</h2>
+      <form id="form-registro" novalidate>
+        <label>
+          Nombre completo
+          <input type="text" name="nombre" id="nombre" required minlength="3" />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" id="email" required />
+        </label>
+
+        <label>
+          Contraseña
+          <input type="password" name="password" id="password" required minlength="6" />
+        </label>
+
+        <label>
+          Fecha de nacimiento
+          <input type="date" name="nacimiento" id="nacimiento" required max="2007-12-31" />
+        </label>
+
+        <label>
+          Teléfono
+          <input type="tel" name="telefono" id="telefono" required pattern="[0-9]{7,15}" />
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" id="acepto" />
+          Acepto los términos y condiciones
+        </label>
+
+        <button id="btn-registro" type="submit" disabled>Enviar registro</button>
+        <div id="registro-msg" class="small-text"></div>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

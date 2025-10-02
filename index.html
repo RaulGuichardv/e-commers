@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inicio - Tienda Ejemplo</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body id="page-inicio">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="index.html">MiTienda</a></h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="carrito.html">Carrito <span id="cart-count" class="badge">0</span></a></li>
+          <li><a href="busqueda.html">Búsqueda</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="banner">
+      <img src="./imgs/banner.jpg" alt="Banner tienda" />
+    </section>
+
+    <section class="welcome">
+      <h2>Bienvenido a MiTienda</h2>
+      <p>Encuentra productos seleccionados con excelentes precios. Explora nuestro catálogo y prueba la experiencia.</p>
+
+      <ul class="featured-list">
+        <li>Camisas de temporada</li>
+        <li>Accesorios</li>
+        <li>Calzado</li>
+        <li>Ofertas semanales</li>
+      </ul>
+
+      <div class="dynamic-msg" id="dynamic-msg"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
