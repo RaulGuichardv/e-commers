@@ -1,7 +1,4 @@
-// script.js - controla la interactividad en todas las páginas
-
 document.addEventListener('DOMContentLoaded', () => {
-  // ACTUALIZA contador del carrito (simulación)
   const cartCountEls = document.querySelectorAll('#cart-count');
   let cartCount = 0;
   function updateCartCount() {
@@ -9,9 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   updateCartCount();
 
-  /* ======================
-     SCRIPTS para index.html
-     ====================== */
+
   const msgEl = document.getElementById('dynamic-msg');
   if (msgEl) {
     const now = new Date();
@@ -19,9 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     msgEl.textContent = `Hoy es ${now.toLocaleDateString('es-ES', opciones)}. ¡Bienvenido!`;
   }
 
-  /* ======================
-     Registro: validaciones y habilitar botón
-     ====================== */
+
   const acepta = document.getElementById('acepto');
   const btnRegistro = document.getElementById('btn-registro');
   const formRegistro = document.getElementById('form-registro');
@@ -34,13 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     formRegistro.addEventListener('submit', (e) => {
       e.preventDefault();
-      // Validación HTML5
       if (!formRegistro.checkValidity()) {
         registroMsg.textContent = 'Por favor rellena todos los campos correctamente.';
         registroMsg.style.color = 'crimson';
         return;
       }
-      // Simular envío
       registroMsg.textContent = '¡Registro exitoso! (simulado)';
       registroMsg.style.color = 'green';
       formRegistro.reset();
@@ -48,9 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ======================
-     Quiénes somos: ver más / ocultar
-     ====================== */
+
   const toggleBtn = document.getElementById('toggle-mas');
   const descCompleta = document.getElementById('descripcion-completa');
   if (toggleBtn && descCompleta) {
@@ -60,9 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ======================
-     Catálogo: agregar al carrito (simulado)
-     ====================== */
+
   const addButtons = document.querySelectorAll('.add-cart');
   addButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -75,9 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ======================
-     Carrito: recalcular total al cambiar cantidades
-     ====================== */
+
   const cartTable = document.getElementById('cart-table');
   if (cartTable) {
     const qtyInputs = cartTable.querySelectorAll('.qty');
@@ -106,13 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Inicial
     recalcTotal();
   }
 
-  /* ======================
-     Búsqueda: mostrar resultados
-     ====================== */
+
   const formBusqueda = document.getElementById('form-busqueda');
   const inputBusqueda = document.getElementById('input-busqueda');
   const resultados = document.getElementById('resultados');
@@ -123,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const term = inputBusqueda.value.trim();
       if (!term) return;
       resultados.innerHTML = `<h3>Resultados para la búsqueda de <em>${escapeHtml(term)}</em></h3>`;
-      // Productos ficticios (siempre se muestran algunos)
+
       const sample = [
         {name:'Camisa casual', price:350},
         {name:'Zapatos deportivos', price:850},
@@ -139,9 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ======================
-     Pequeño sistema de notificaciones (toast)
-     ====================== */
+
   function showToast(text, ms = 2200) {
     const t = document.createElement('div');
     t.className = 'toast';
@@ -162,9 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { t.remove(); }, ms);
   }
 
-  /* ======================
-     Helpers
-     ====================== */
+
   function escapeHtml(str) {
     return str.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]);
   }

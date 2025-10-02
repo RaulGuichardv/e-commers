@@ -71,10 +71,8 @@ body{
   margin-left:6px;
 }
 
-/* Banner */
 .banner img{ width:100%; border-radius:10px;  }
 
-/* Cards */
 .card{
   background:var(--card);
   padding:16px;
@@ -83,11 +81,9 @@ body{
   margin-top:16px;
 }
 
-/* Welcome */
 .welcome h2{ margin-top:10px; }
 .featured-list{ margin:10px 0 0 0; padding-left:18px; color:var(--muted); }
 
-/* Forms */
 form label{ display:block; margin-bottom:10px; font-size:0.95rem; }
 form input[type="text"],
 form input[type="email"],
@@ -106,7 +102,6 @@ form input[type="number"]{
 button{ background:var(--accent); color:#fff; border:0; padding:10px 14px; border-radius:8px; cursor:pointer; }
 button[disabled]{ opacity:0.6; cursor:not-allowed; }
 
-/* Products grid */
 .products-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -123,19 +118,15 @@ button[disabled]{ opacity:0.6; cursor:not-allowed; }
 .product-card img{ width:40%; object-fit:cover; border-radius:8px; }
 .price{ color:var(--accent); font-weight:700; margin:8px 0; }
 
-/* Table (carrito & team) */
 table{ width:100%; border-collapse:collapse; margin-top:12px; background:var(--card); box-shadow:var(--shadow); border-radius:10px; overflow:hidden; }
 th, td{ padding:10px; text-align:left; border-bottom:1px solid #f1f3f5; }
 .cart-table img{ width:50px; border-radius:6px; }
 
-/* Small utilities */
 .hidden{ display:none; }
 .small-text{ margin-top:8px; color:var(--muted); font-size:0.9rem; }
 
-/* Footer */
 .site-footer{ margin-top:24px; padding:16px 0; text-align:center; color:var(--muted); font-size:0.9rem; }
 
-/* Responsive tweaks */
 @media (max-width:640px){
   .header-inner{ flex-direction:column; align-items:flex-start; gap:8px; }
   .nav-list{ flex-wrap:wrap; gap:6px; }
